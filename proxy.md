@@ -43,8 +43,11 @@ var p = new Proxy(target, {
   }
 });
 
-target：必须具有有效的constructor，可供new操作<br>
-argumentslist：参数<br>
-newtarget：新创建的对象<br>
+target：必须具有有效的constructor，可供new操作
+
+argumentslist：参数
+
+newtTarget：新创建的对象
+
 construct必须返回一个对象
 ```
