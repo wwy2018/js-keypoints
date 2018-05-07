@@ -78,3 +78,15 @@ console.assert(fun.bind(true)() === true);
 > 不支持fun.caller, fun.callee, fun.arguments
 
 > 字符implements, interface, let, package, private, protected, public, static和yield不能作为变量名或者形参名。
+
+> 严格模式下，`block`中的函数在`block`外无法访问
+```
+'use strict';
+console.log(foo);            //Uncaught ReferenceError: foo is not defined
+{
+   function foo(){
+      console.log(1);
+   }
+}
+foo();                       //Uncaught ReferenceError: foo is not defined
+```
